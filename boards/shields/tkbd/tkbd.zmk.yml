@@ -1,0 +1,11 @@
+file_format: "1"
+id: tkbd
+name: Tom's board
+type: shield
+url: https://github.com/tomnzed/my-keyboard
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - tkbd_left
+  - tkbd_right
