@@ -25,6 +25,15 @@
             };
     };
 
+    behaviors {
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -47,7 +56,7 @@ label= "BASE"                              ;
     &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
     &mt LSHFT A &mt LALT S  &mt LCTRL D &mt LGUI F  &kp G           &kp H       &mt RGUI J  &mt RCTRL K &mt RALT L  &mt RSHFT SEMI
     &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH   
-                            &kp SPACE   &kp BSPC    &lt NAV TAB     &lt SYM RET &kp SPACE   &kp SPACE
+                            &kp SPACE   &bspc_del   &lt NAV TAB     &lt SYM RET &kp SPACE   &kp SPACE
             >;
     };
 
@@ -94,7 +103,7 @@ label= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp ASTRK    &kp SQT     &kp DQT     
+    &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp ASTRK    &kp SQT    &kp DQT     
   &mt LSHFT N1 &mt LALT N2 &mt LCTRL N3 &mt LGUI N4 &kp N5         &kp N6      &mt RGUI N7 &mt RCTRL N8 &mt RALT N9 &mt RSHFT N0
     &kp GRAVE   &kp TILDE   &kp BSLH    &kp PIPE    &kp LBKT        &kp RBKT    &kp UNDER   &kp PLUS     &kp MINUS   &kp EQUAL     
                             &trans      &trans      &mo ADJ         &trans      &trans      &trans      
