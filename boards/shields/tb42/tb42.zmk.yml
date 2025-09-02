@@ -1,0 +1,11 @@
+file_format: "1"
+id: tb42
+name: Tom's board 3x6
+type: shield
+url: https://github.com/tom-strowger/board-3x6
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - tb42_left
+  - tb42_right

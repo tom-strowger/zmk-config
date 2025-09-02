@@ -19,6 +19,6 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: tkbd_left
+    shield: tb42_left
   - board: seeeduino_xiao_ble
-    shield: tkbd_right
+    shield: tb42_right

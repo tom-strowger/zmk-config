@@ -1,17 +1,17 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_TKBD_LEFT
+if SHIELD_TB42_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Tom's board"
+    default "Tom's board 3x6"
     
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_TKBD_LEFT || SHIELD_TKBD_RIGHT
+if SHIELD_TB42_LEFT || SHIELD_TB42_RIGHT
 
 config ZMK_SPLIT
     default y
